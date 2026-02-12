@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Please Reconsider 💗</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Sad background audio -->
+    <audio id="sadAudio" src="sad sound.mp3" autoplay loop></audio>
+
+    <!-- Section: Please Reconsider -->
+    <section class="section message-section active" id="pleaseSection">
+        <div class="content">
+            <div class="gif-container fade-in">
+                <img src="pretty pls.gif" alt="Pretty please GIF" class="intro-gif">
+            </div>
+            <h2 class="fade-in">Please??? I REALLLYY REALLY LOVE YOUUUUUU</h2>
+            <div class="message-text">
+               
+            </div>
+            <button class="hi-btn fade-in delay-5" id="backBtn">YESSS <3</button>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+    <script>
+        // Ensure sad audio starts from the beginning on each visit/refresh
+        window.addEventListener('load', function () {
+            const audio = document.getElementById('sadAudio');
+            if (audio) {
+                audio.currentTime = 0;
+                // Try to play; some browsers may block autoplay with sound
+                audio.play().catch(function () {});
+            }
+        });
+    </script>
+</body>
+</html>

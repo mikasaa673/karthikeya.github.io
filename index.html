@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Solar System Explorer</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: 'Segoe UI', sans-serif;
+        background: linear-gradient(to bottom, #000428, #004e92);
+        color: white;
+    }
+
+    header {
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    header h1 {
+        font-size: 3rem;
+        margin-bottom: 10px;
+    }
+
+    .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: auto;
+        padding-bottom: 50px;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 25px;
+    }
+
+    .planet-card {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border-radius: 15px;
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .planet-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+    }
+
+    .planet-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .planet-content {
+        padding: 15px;
+    }
+
+    .planet-content h2 {
+        margin: 0 0 10px;
+        color: #ffd369;
+    }
+
+    footer {
+        text-align: center;
+        padding: 20px;
+        background: rgba(0,0,0,0.4);
+        font-size: 0.9rem;
+    }
+    #spaceCat {
+    position: fixed;
+    width: 80px;
+    left: 50px;
+    bottom: 30px;
+    z-index: 9999;
+    pointer-events: none;
+    transition: left 3s linear, bottom 3s linear, transform 0.2s;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>🪐 Solar System Explorer</h1>
+    <p>Explore the eight planets of our solar system</p>
+</header>
+
+<div class="container">
+    <div class="grid">
+        <img src="https://media.tenor.com/2roX3uxz_68AAAAi/cat-space.gif" id="spaceCat" alt="walking cat">
+
+        <div class="planet-card">
+            <img src="https://solarsystem.nasa.gov/system/feature_items/images/18_mercury_new.png" alt="Mercury">
+            <div class="planet-content">
+                <h2>Mercury</h2>
+                <p>The closest planet to the Sun with extreme temperature changes.</p>
+            </div>
+        </div>
+
+        <div class="planet-card">
+            <img src="https://solarsystem.nasa.gov/system/feature_items/images/27_venus_jg.png" alt="Venus">
+            <div class="planet-content">
+                <h2>Venus</h2>
+                <p>The hottest planet due to its thick greenhouse atmosphere.</p>
+            </div>
+        </div>
+
+        <div class="planet-card">
+            <img src="https://solarsystem.nasa.gov/system/feature_items/images/17_earth.png" alt="Earth">
+            <div class="planet-content">
+                <h2>Earth</h2>
+                <p>Our home planet and the only one known to support life.</p>
+            </div>
+        </div>
+
+        <div class="planet-card">
+            <img src="https://solarsystem.nasa.gov/system/feature_items/images/19_mars.png" alt="Mars">
+            <div class="planet-content">
+                <h2>Mars</h2>
+                <p>The Red Planet with the tallest volcano in the solar system.</p>
+            </div>
+        </div>
+
+        <div class="planet-card">
+            <img src="https://solarsystem.nasa.gov/system/feature_items/images/16_jupiter_new.png" alt="Jupiter">
+            <div class="planet-content">
+                <h2>Jupiter</h2>
+                <p>The largest planet, famous for its Great Red Spot storm.</p>
+            </div>
+        </div>
+
+        <div class="planet-card">
+            <img src="https://solarsystem.nasa.gov/system/feature_items/images/28_saturn.png" alt="Saturn">
+            <div class="planet-content">
+                <h2>Saturn</h2>
+                <p>Known for its beautiful ring system made of ice and rock.</p>
+            </div>
+        </div>
+
+        <div class="planet-card">
+            <img src="https://solarsystem.nasa.gov/system/feature_items/images/29_uranus.png" alt="Uranus">
+            <div class="planet-content">
+                <h2>Uranus</h2>
+                <p>An ice giant that rotates on its side.</p>
+            </div>
+        </div>
+
+        <div class="planet-card">
+            <img src="https://solarsystem.nasa.gov/system/feature_items/images/30_neptune.png" alt="Neptune">
+            <div class="planet-content">
+                <h2>Neptune</h2>
+                <p>The farthest planet, known for powerful winds and deep blue color.</p>
+            </div>
+        </div>
+
+    </div>
+    <div style="text-align:center; margin: 30px 0;">
+        <a href="page1.html">
+            <button style="
+                padding: 12px 25px;
+                font-size: 16px;
+                border: none;
+                border-radius: 25px;
+                background: #ffd369;
+                color: #000;
+                cursor: pointer;
+                transition: 0.3s;
+            "
+            onmouseover="this.style.background='#ffb347'"
+            onmouseout="this.style.background='#ffd369'">
+                Click Here
+            </button>
+        </a>
+    </div>
+    
+</div>
+
+<footer>
+    © 2026 Solar System Explorer
+</footer>
+
+</body>
+</html>

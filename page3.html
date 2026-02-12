@@ -1,0 +1,57 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Valentine? 💗</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="page1">
+    <!-- Floating Hearts Background -->
+    <div class="hearts-container" id="heartsContainer"></div>
+
+    <!-- Background music just for this page -->
+    <audio id="bgMusic" src="music.mp3" autoplay loop preload="auto"></audio>
+
+    <!-- Soft glow overlay -->
+    <div class="romantic-glow"></div>
+
+    <!-- Section 3: The Question -->
+    <section class="section question-section active" id="questionSection">
+        <div class="content grand-proposal">
+            <p class="proposal-overline fade-in">for the one who has my whole heart</p>
+            <h2 class="proposal-title fade-in delay-1">Will you be my Valentine?</h2>
+            
+            <div class="image-wrap fade-in delay-2">
+                <img src="image.png" alt="Us together" class="rounded-img proposal-img">
+            </div>
+            <p class="proposal-subtext fade-in delay-3">
+                No matter what the world looks like, it already feels perfect to me because you're in it.
+                So, on this very special day, I want to ask you properly, with all my heart.
+            </p>
+            <div class="button-container fade-in delay-4">
+                <div class="floating-container">
+                    <button class="btn yes-btn proposal-yes" id="yesBtn">YESSS</button>
+                    <button class="btn no-btn proposal-no" id="noBtn">NO</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Confetti Container -->
+    <div class="confetti-container" id="confettiContainer"></div>
+
+    <script src="script.js"></script>
+    <script>
+        // Ensure background music starts from the beginning on each visit/refresh
+        window.addEventListener('load', function () {
+            const audio = document.getElementById('bgMusic');
+            if (audio) {
+                try { audio.currentTime = 0; } catch (e) {}
+                audio.play().catch(function () { /* ignore autoplay blocking */ });
+            }
+        });
+    </script>
+</body>
+</html>
